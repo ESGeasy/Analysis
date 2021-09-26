@@ -2,10 +2,10 @@
 ## Table of Contents
 <!--ts-->
 - [About](#about)
-- [The 1 million dollar question](#the-problem-to-be-solved)
+- [The 1 million dollar question](##The-problem)
 - [Requirements](#requirements)
 - [How to use](#how-to-use)
-- [Data Exploration](#data-exploration)
+- [Data Exploration](#data)
 - [Technologies](#technologies)
 <!--te-->
 
@@ -34,7 +34,7 @@ Once the software is downloaded, be sure that you have matplotlib, numpy, pandas
 
 To do so, simply write 
 ```bash
-$conda install <em>package</em>
+$conda install package
 ```
 for each of the above libraries.
 
@@ -49,9 +49,9 @@ all cells
 
 ## Data Exploration
 
-Let's start looking at the companies_all.csv. It contains data related to each company, such as Id, country,
-region, industry segment and more.
+Let's start looking at the companies_all.csv. It contains data related to each company, such as Id, country, region, industry segment and more.
 ![alt text](https://github.com/Hackganization/Analysis/blob/main/companies.png?raw=true)
+
 Next, let's see the frequencies of each industry segment:
 ![alt text](https://github.com/Hackganization/Analysis/blob/main/frequencias_bolsa.png?raw=true)
 
@@ -59,9 +59,15 @@ We found that the frequencies of companies at the financial markets are very imb
 generate a bias if some prediction model were used. The first idea we had was to make a cluster of companies, but
 we changed to time series forecasting, which reason will become clear later.
 
+Now, we will look at ESG data at esg_scores_history_rated.csv:
 ![alt text](https://github.com/Hackganization/Analysis/blob/main/esg_dataset.png?raw=true)
+It contains data like the company_id, industry_segment, assessment_year, parent_aspect, score_weight and score_value. We will use the parent_aspect in order to aggregate the data to obtain the score for each ESG dimension, but first let's look how these scores are distributed:
+![alt text](https://github.com/Hackganization/Analysis/blob/main/boxplot.png?raw=true)
 
+It seems like the distributions are similar, but for environmental dimension the median is significantly lower than the others. It could be an indicative that companies still are not very worried
+about environmental issues.
 
+Finally, we are going to build a model to predict the next ESG given the historical data. It can be useful if an investor is looking for a prediction of the ESG performance in the next years. To do so, we used SimpleExpSmoothing model, from the <a href=https://www.statsmodels.org/stable/tsa.html>statsmodel library</a>. It is quite simple and fast model, so it is easy scalable for huge datasets.
 
 ## Technologies
 
