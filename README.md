@@ -55,9 +55,7 @@ Let's start looking at the companies_all.csv. It contains data related to each c
 Next, let's see the frequencies of each industry segment:
 ![alt text](https://github.com/Hackganization/Analysis/blob/main/frequencias_bolsa.png?raw=true)
 
-We found that the frequencies of companies at the financial markets are very imbalanced, which could possibly
-generate a bias if some prediction model were used. The first idea we had was to make a cluster of companies, but
-we changed to time series forecasting, which reason will become clear later.
+We found that the frequencies of companies at the financial markets are very imbalanced, which could possibly generate a bias if some prediction model were used. The first idea we had was to make a cluster of companies, but we changed to time series forecasting, which reason will become clear later.
 
 Now, we will look at ESG data at esg_scores_history_rated.csv:
 ![alt text](https://github.com/Hackganization/Analysis/blob/main/esg_dataset.png?raw=true)
@@ -67,7 +65,8 @@ It contains data like the company_id, industry_segment, assessment_year, parent_
 It seems like the distributions are similar, but for environmental dimension the median is significantly lower than the others. It could be an indicative that companies still are not very worried
 about environmental issues.
 
-Finally, we are going to build a model to predict the next ESG given the historical data. It can be useful if an investor is looking for a prediction of the ESG performance in the next years. To do so, we used SimpleExpSmoothing model, from the <a href=https://www.statsmodels.org/stable/tsa.html>statsmodel library</a>. It is quite simple and fast model, so it is easy scalable for huge datasets.
+Finally, we are going to build a model to predict the next ESG given the historical data. It can be useful if an investor is looking for a prediction of the ESG performance in the next years. To do so, we used SimpleExpSmoothing model, from the <a href=https://www.statsmodels.org/stable/tsa.html>statsmodel library</a>. It is a quite simple and fast model, so it is easy scalable for huge datasets. For more about the theory, see: <a href=https://otexts.com/fpp2>Time series forecasting: principles and practices</a>. Once that these future ESG values are predicted, including the global score, it is used to provide a ranking of the companies to the potential investor, given his(her) preferences. The final step is aggregate both ESG predicted scores and company details to serve for the application, resulting in the following Amostra_das_empresas.csv dataset:
+![alt text](https://github.com/Hackganization/Analysis/blob/main/esg_scores.png?raw=true) 
 
 ## Technologies
 
