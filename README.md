@@ -77,3 +77,4 @@ It is important to note that since it is a proof of concept, only a sample consi
 - Docker
 - Pandas
 - Flask
+- Statsmodels
