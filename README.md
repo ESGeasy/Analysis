@@ -16,10 +16,10 @@ It is the first analysis of the data available. Here we explore 3 datasets:
 - companies_all.csv
 - environmental_data_history_all.csv
 
-## The problem to be solved
+## The problem to be solved: Which company best fits with my values?
 
 We are mainly interested in solving the investor/company matching problem. To do so, we considered 2 approches,
-which will be clear later.
+which will be clear later: one with clustering approch, and another with ESG forecasting. 
 
 ## Requirements
 
