@@ -49,7 +49,7 @@ all cells
 
 ## Data Exploration
 
-Let's start looking at the companies_all.csv. It contains data related to each company, such as Id, country, region, industry segment and more.
+Let's start looking at the companies_all.csv. It contains data related to each company, such as Id, country, region, industry segment and more:
 ![alt text](https://github.com/Hackganization/Analysis/blob/main/companies.png?raw=true)
 
 Next, let's see the frequencies of each industry segment:
@@ -59,6 +59,7 @@ We found that the frequencies of companies at the financial markets are very imb
 
 Now, we will look at ESG data at esg_scores_history_rated.csv:
 ![alt text](https://github.com/Hackganization/Analysis/blob/main/esg_dataset.png?raw=true)
+
 It contains data like the company_id, industry_segment, assessment_year, parent_aspect, score_weight and score_value. We will use the parent_aspect in order to aggregate the data to obtain the score for each ESG dimension, but first let's look how these scores are distributed:
 ![alt text](https://github.com/Hackganization/Analysis/blob/main/boxplot.png?raw=true)
 
