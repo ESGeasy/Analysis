@@ -2,7 +2,7 @@
 ## Table of Contents
 <!--ts-->
 - [About](#about)
-- [The 1 million dollar question](##The-problem)
+- [The 1 million dollar question](##The-problem-to-be-solved-Which-company-best-fits-with-my-values)
 - [Requirements](#requirements)
 - [How to use](#how-to-use)
 - [Data Exploration](#data)
